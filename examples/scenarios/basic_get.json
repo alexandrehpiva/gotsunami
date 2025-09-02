@@ -1,0 +1,26 @@
+{
+  "name": "basic_get_test",
+  "description": "Basic GET request test",
+  "method": "GET",
+  "url": "/api/v1/health",
+  "base_url": "https://httpbin.org",
+  "headers": {
+    "Content-Type": "application/json",
+    "User-Agent": "GoTsunami/1.0"
+  },
+  "query_params": {
+    "format": "json"
+  },
+  "timeout": "30s",
+  "retry": {
+    "attempts": 3,
+    "backoff": "exponential",
+    "max_delay": "5s"
+  },
+  "validation": {
+    "status_codes": [200],
+    "response_time_max": "2s",
+    "body_contains": ["url"],
+    "body_not_contains": ["error"]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "post_with_auth_test",
+  "description": "POST request with authentication",
+  "method": "POST",
+  "url": "/api/v1/users",
+  "base_url": "https://httpbin.org",
+  "headers": {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer {{token}}",
+    "User-Agent": "GoTsunami/1.0"
+  },
+  "body": {
+    "name": "Test User",
+    "email": "test@example.com",
+    "age": 30
+  },
+  "timeout": "30s",
+  "retry": {
+    "attempts": 3,
+    "backoff": "exponential",
+    "max_delay": "5s"
+  },
+  "validation": {
+    "status_codes": [200, 201],
+    "response_time_max": "3s",
+    "body_contains": ["json"],
+    "body_not_contains": ["error", "exception"]
+  },
+  "environment": {
+    "env": "test"
+  },
+  "variables": {
+    "token": "{{env.API_TOKEN}}"
+  }
+}
