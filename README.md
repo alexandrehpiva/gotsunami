@@ -27,13 +27,13 @@
 ### Instalação via Go
 
 ```bash
-go install github.com/alexandredias/gotsunami/cmd/gotsunami@latest
+go install github.com/alexandrehpiva/gotsunami/cmd/gotsunami@latest
 ```
 
 ### Instalação via Build Local
 
 ```bash
-git clone https://github.com/alexandredias/gotsunami.git
+git clone https://github.com/alexandrehpiva/gotsunami.git
 cd gotsunami
 make build
 ```
@@ -318,7 +318,7 @@ jobs:
           go-version: '1.21'
       
       - name: Install GoTsunami
-        run: go install github.com/alexandredias/gotsunami/cmd/gotsunami@latest
+        run: go install github.com/alexandrehpiva/gotsunami/cmd/gotsunami@latest
       
       - name: Run Load Test
         run: |
@@ -378,7 +378,7 @@ make benchmark
 
 ```bash
 # Clone o repositório
-git clone https://github.com/alexandredias/gotsunami.git
+git clone https://github.com/alexandrehpiva/gotsunami.git
 cd gotsunami
 
 # Instale dependências
@@ -430,8 +430,8 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 ## 🆘 Suporte
 
 - **Documentação**: [docs/](docs/)
-- **Issues**: [GitHub Issues](https://github.com/alexandredias/gotsunami/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/alexandredias/gotsunami/discussions)
+- **Issues**: [GitHub Issues](https://github.com/alexandrehpiva/gotsunami/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/alexandrehpiva/gotsunami/discussions)
 
 ## 🎯 Roadmap
 
